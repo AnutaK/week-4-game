@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Assignment</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Francois+One|Ubuntu+Condensed" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class = "container">
+
+		<div class = "row">
+			<div class = "col-md-4" id = "row1">
+				CrystalsCollector!
+			</div>
+			
+		</div>
+		<div class = "row">
+			<div class = "col-md-4" id = "row2">
+
+				<p>You will be given a random number at the start of the game.</p>
+
+				<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+
+				<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+				<p>The value of each crystal is hidden from you until you click on it.</p>
+
+				<p>Each time when the game starts, the game will change the values of each crystal</p>
+
+			</div>
+			
+		</div>
+		<div class = "row">
+			<div class = "col-md-6" id = "randomNumber">
+
+			</div>
+
+			<div class = "col-md-6" id = "row3">
+				<div id="winsAndLosses">
+					<div id="wins">Wins: </div>
+					<div id="losses">Losses: </div>
+				</div>
+			</div>
+			
+		</div>
+		<div class = "row" id = "crystalDiv">
+
+		</div>
+		<div class = "row">
+			<div class = "col-md-4" id = "row5">
+				Your total score is: 
+			</div>
+
+		</div>
+
+		<div class = "row">
+			<div class = "col-md-4" id="totalScore">
+
+			</div>		
+
+		</div>
+	</body>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	</html>
