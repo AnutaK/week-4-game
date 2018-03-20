@@ -1,0 +1,101 @@
+body {
+	margin:0;
+	padding:0;
+	background: url("../images/tileable_wood_texture.png");
+	font-family: 'Abril Fatface', cursive;
+}
+
+
+#row1 {
+
+	background-color: #F5CBA7;
+	width: 200px;
+	height: 100px;
+	margin: 5px;
+	font-size: 20px;
+	border-radius: 25px;
+}
+
+#row2 {
+
+	background-color: #A569BD;
+	width: 500px;
+	height: 250px;
+	margin: 5px;
+	font-size: 12px bold;
+	color: white;
+	border-radius: 25px;
+	padding: 20px;
+
+
+}
+
+#randomNumber{
+
+	background-color: #F5CBA7;
+	width: 200px;
+	height: 100px;
+	margin: 5px;
+	font-size: 20px;
+	border-radius: 25px;
+	padding: 20px;
+
+
+}
+
+#row3 {
+
+	background-color: orange;
+	width: 200px;
+	height: 100px;
+	margin: 5px;
+	font-size: 20px;
+	border-radius: 25px;
+
+}
+
+#crystal1,
+#crystal2,
+#crystal3,
+#crystal4 {
+
+	background-color: green;
+	width: 100px;
+	height: 90px;
+	margin: 5px;
+	font-size: 20px;
+	border-radius: 25px;
+
+
+}
+
+#row5 {
+
+	background-color: rebeccapurple;
+	width: 270px;
+	height: 50px;
+	margin: 5px;
+	font-size: 20px;
+	color: white;
+	border-radius: 25px;
+
+}
+
+#totalScore {
+
+	background-color: #BD7B69;
+	width: 270px;
+	height: 100px;
+	margin: 5px;
+	font-size: 20px;
+	border-radius: 25px;
+	color: white;
+
+}
+
+#crystalDiv {
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
