@@ -1,101 +1,83 @@
 body {
-	margin:0;
-	padding:0;
-	background: url("../images/tileable_wood_texture.png");
-	font-family: 'Abril Fatface', cursive;
+
+	font-family: 'Berkshire Swash', cursive;
+	background-color: #F4F6F6;
+	background-image: url("../images/regal.png");
 }
 
+#header {
 
-#row1 {
-
-	background-color: #F5CBA7;
-	width: 200px;
-	height: 100px;
-	margin: 5px;
-	font-size: 20px;
+	background-image: url("../images/background-image.png");
+	font-size: 60px;
 	border-radius: 25px;
-}
-
-#row2 {
-
-	background-color: #A569BD;
-	width: 500px;
-	height: 250px;
-	margin: 5px;
-	font-size: 12px bold;
-	color: white;
-	border-radius: 25px;
-	padding: 20px;
-
+	text-align: center;
+	margin-top: 15px;
+	padding: 40px;
+	color: #F7F9F9;
 
 }
 
-#randomNumber{
+#instructions{
 
-	background-color: #F5CBA7;
-	width: 200px;
-	height: 100px;
-	margin: 5px;
-	font-size: 20px;
-	border-radius: 25px;
-	padding: 20px;
-
-
-}
-
-#row3 {
-
-	background-color: orange;
-	width: 200px;
-	height: 100px;
-	margin: 5px;
-	font-size: 20px;
-	border-radius: 25px;
-
-}
-
-#crystal1,
-#crystal2,
-#crystal3,
-#crystal4 {
-
-	background-color: green;
-	width: 100px;
-	height: 90px;
-	margin: 5px;
-	font-size: 20px;
-	border-radius: 25px;
-
-
-}
-
-#row5 {
-
-	background-color: rebeccapurple;
-	width: 270px;
-	height: 50px;
-	margin: 5px;
+	text-align: center;
 	font-size: 20px;
 	color: white;
-	border-radius: 25px;
+	border-radius: 20px;
+	height: 100%;
+	text-align: center;
+	padding: 15px;
+	background-image: url("../images/instructions-background.png");
+
+}
+
+#top-buffer{
+
+	margin-top: 40px;
+	text-align: center;
+}
+
+#crystalDiv {	
+
+	display: inline-flex;
+	margin-left: 30%;
+	flex-wrap: wrap;
+}
+
+.crystal_image {
+
+	width: 110px;
+	height: 110px;
+	padding: 10px;
+}
+
+#randomNumber {
+
+	height: 100%;
+	border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 50px;
+	color: #884EA0;
+
+}
+
+#gameMessage {
+	height: 100;
+	border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 50px;
+	color: #884EA0;
+}
+
+#scoreMessage{
+
+	margin-bottom: 20px;
+	font-size: 20px;
 
 }
 
 #totalScore {
 
-	background-color: #BD7B69;
-	width: 270px;
-	height: 100px;
-	margin: 5px;
-	font-size: 20px;
-	border-radius: 25px;
-	color: white;
-
+	font-size: 100px;
 }
-
-#crystalDiv {
-
-	display: flex;
-	flex-wrap: wrap;
-}
-

@@ -6,38 +6,40 @@ $(document).ready(function(){
 	var losses=0;
 	var random;
 
-	var crystals = [
-
-	{
-		points: randomIntFromInterval(1,12),
-		image: "assets/images/blue.png"
-	},
-
-	{
-
-		points: randomIntFromInterval(1,12),
-		image: "assets/images/blue.png"
-	},
-
-	{
-
-		points: randomIntFromInterval(1,12),
-		image: "assets/images/blue.png"
-
-	},
-
-	{
-
-		points: randomIntFromInterval(1,12),
-		image: "assets/images/blue.png"
+	function randomIntFromInterval(min,max){
+		return Math.floor(Math.random()*(max-min+1)+min);
 	}
-	]
 
-	secretNumber = randomIntFromInterval(19,120);
+	//create an object array to randomly generate a number
 
-	$("#randomNumber").html(secretNumber);
 
 	function buildCrystals(){
+
+		secretNumber = randomIntFromInterval(19,120);
+
+		$("#randomNumber").html(secretNumber);
+
+
+		var crystals = [
+
+		{	points: randomIntFromInterval(1,12),
+			image: "assets/images/red.png"
+		},
+
+		{	points: randomIntFromInterval(1,12),
+			image: "assets/images/blue.png"
+		},
+
+		{	points: randomIntFromInterval(1,12),
+			image: "assets/images/yellow.png"
+
+		},
+
+		{	points: randomIntFromInterval(1,12),
+			image: "assets/images/green.png"
+		}
+		]
+		$(".crystal_button").html("")
 
 		for(var i = 0; i < crystals.length; i++){
 
@@ -47,39 +49,47 @@ $(document).ready(function(){
 			crystal.append(image)
 
 			$("#crystalDiv").append(crystal)
-
 		}
-
 	}
-	
+
+
+	$(document).on("click", ".crystal_button", function(){
+		var currentClick = $(this).attr("data-name")
+
+		crystalSecretNumber+=parseInt(currentClick)
+		$("#totalScore").html(crystalSecretNumber)
+		gameResult()
+
+		console.log(currentClick)
+
+	});
+
 	function gameResult(){
 
-		if(crystalSecretNumber == secretNumber){
+		if(crystalSecretNumber === secretNumber){
 			$("#winsAndLosses").prepend("You won!")
 			wins++
-			$("#wins").append(wins)
-			console.log("You won")
+			console.log(winsAndLosses)
+			$("#wins").html(`<div id='wins'>Wins: ${wins}</div>`)
+			reset()
 
 		} else if(crystalSecretNumber > secretNumber){
 			$("#winsAndLosses").prepend("You lost!")
 			losses++
-			$("#losses").append(losses)
-			console.log("You lost")
+			$("#losses").html(`<div id='losses'>Losses: ${losses}</div>`)
+			reset()
 		}
-
 	}
 
-	function randomIntFromInterval(min,max){
-		return Math.floor(Math.random()*(max-min+1)+min);
+	function reset(){
+		secretNumber = randomIntFromInterval(19,120);
+		$("#randomNumber").html(secretNumber);
+		$("#totalScore").text("")
+		$("#winsAndLosses").text("")
+		crystalSecretNumber = 0
+		buildCrystals();
+	
 	}
-
-	$(document).on("click", ".crystal_button", function(){
-		var currentClick = $(this).attr("data-name")
-		crystalSecretNumber+=currentClick
-		console.log(currentClick)
-		$("#totalScore").text(crystalSecretNumber)
-		// gameResult()
-	});
 
 	buildCrystals();
 
