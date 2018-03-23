@@ -52,7 +52,6 @@ $(document).ready(function(){
 		}
 	}
 
-
 	$(document).on("click", ".crystal_button", function(){
 		var currentClick = $(this).attr("data-name")
 
@@ -67,17 +66,17 @@ $(document).ready(function(){
 	function gameResult(){
 
 		if(crystalSecretNumber === secretNumber){
-			$("#winsAndLosses").prepend("You won!")
 			wins++
 			console.log(winsAndLosses)
 			$("#wins").html(`<div id='wins'>Wins: ${wins}</div>`)
 			reset()
+			$("#winsAndLosses").prepend("You won!")
 
 		} else if(crystalSecretNumber > secretNumber){
-			$("#winsAndLosses").prepend("You lost!")
 			losses++
 			$("#losses").html(`<div id='losses'>Losses: ${losses}</div>`)
 			reset()
+			$("#winsAndLosses").prepend("<p>You lost!</p>")
 		}
 	}
 
